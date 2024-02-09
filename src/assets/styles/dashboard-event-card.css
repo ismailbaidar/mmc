@@ -1,0 +1,25 @@
+.dashboard-event-card {
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  background-color: white;
+
+  width: 100%;
+  gap: 3rem;
+  box-shadow: 1px 1px 1px lightgray;
+  font-size: 1.2rem;
+}
+
+.dashboard-event-card .icon {
+  font-size: 3rem;
+}
+
+.dashboard-event-card .stat {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.dashboard-event-card .name {
+  font-size: 1rem;
+  color: gray;
+}

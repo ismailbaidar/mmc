@@ -1,0 +1,45 @@
+.dashboard-wrapper {
+  display: flex;
+  gap: 2rem;
+
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  height: max-content;
+
+  width: 100%;
+}
+.admin-section {
+  background-color: #f2f3f5;
+}
+
+.dashboard-wrapper .cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  /* padding-inline: 3rem; */
+  padding-block: 1rem;
+
+  width: 100%;
+}
+.dashboard-container {
+  width: 100%;
+}
+.dashboard-container table th {
+  padding: 1rem;
+}
+
+.dashboard-wrapper .dashboard-event-card:nth-child(1) .icon {
+  color: var(--primary-red);
+}
+
+.dashboard-wrapper .dashboard-event-card:nth-child(2) .icon {
+  color: var(--primary-green);
+}
+
+.dashboard-wrapper .dashboard-event-card:nth-child(3) .icon {
+  color: var(--primary-blue);
+}
+
+.dashboard-wrapper .dashboard-event-card:nth-child(4) .icon {
+  color: var(--primary-yellow);
+}

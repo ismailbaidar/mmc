@@ -1,0 +1,55 @@
+.loading {
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* inset: 0; */
+}
+
+.loading .loading-elements {
+  display: flex;
+  gap: 0.25rem;
+  align-items: flex-end;
+  height: 100px;
+}
+.loading .loading-elements .block {
+  height: 5rem;
+  width: 1.5rem;
+  background-color: blue;
+}
+
+.loading .loading-elements .block:nth-child(1) {
+  height: 1rem;
+  background-color: var(--primary-red);
+  animation: grow linear 800ms 40ms infinite alternate-reverse;
+}
+
+.loading .loading-elements .block:nth-child(2) {
+  background-color: var(--primary-blue);
+  animation: grow linear 700ms 30ms infinite alternate-reverse;
+
+  height: 3rem;
+}
+.loading .loading-elements .block:nth-child(3) {
+  height: 5rem;
+  background-color: var(--primary-yellow);
+  animation: grow linear 900ms 60ms infinite alternate-reverse;
+}
+
+.loading .loading-elements .block:nth-child(4) {
+  height: 7rem;
+  background-color: var(--primary-green);
+  animation: grow linear 1000ms 100ms infinite alternate-reverse;
+}
+
+@keyframes grow {
+  0% {
+    height: 1rem;
+  }
+  100% {
+    height: 7rem;
+  }
+}

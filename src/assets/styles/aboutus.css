@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+.about-us-container {
+  margin: auto;
+  padding: 2rem;
+  display: grid;
+  gap: 3rem;
+  font-size: clamp(0.5rem, 1rem, 1.2rem);
+}
+.about-us-container .titel {
+  font-family: "Oswald", sans-serif;
+}
+.about-us-container .image-container {
+  height: 100%;
+}
+.about-us-container .card-cont {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr; */
+  display: flex;
+  opacity: 0;
+  /* scale: 0; */
+  animation: reveal 300ms forwards linear;
+  animation-timeline: view();
+  animation-range: 5% 45%;
+  /* box-shadow: 1px 1px 3px gray; */
+}
+.about-us-container .text-miss {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  /* font-size: 2rem; */
+}
+.about-us-container .container {
+  display: grid;
+  gap: 1em;
+}
+
+.about-us-container .titel {
+  font-weight: bold;
+  text-align: center;
+  /* padding-bottom: 1rem; */
+  font-size: 3em;
+}
+
+.about-us-container .description {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  letter-spacing: 0 0.5px;
+  font-size: large;
+}
+
+.about-us-container .description {
+  text-align: center;
+  color: black;
+  font-size: 1rem;
+}
+
+.about-us-container .text-body {
+  text-align: justify;
+}
+
+.about-us-container .text-header h4 {
+  color: black;
+}
+.about-us-container :is(.text-contain,.image-container){
+  width: 50%;
+}
+.about-us-container .text-contain {
+  padding: 1em;
+}
+.about-us-container .container .card-cont:nth-child(even) {
+  flex-direction: row-reverse !important;
+  
+}
+@media screen and (width < 700px) {
+  .about-us-container {
+    font-size: 0.8rem;
+  }
+  .about-us-container .container .card-cont {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-us-container .container .card-cont:nth-child(even) {
+    flex-direction: column-reverse !important;
+    
+  }
+  .about-us-container .text-miss {
+    display: grid;
+    gap: 1rem;
+  }
+  .about-us-container .text-miss .titel {
+    font-size: 1.2rem;
+  }
+  .about-us-container .description {
+    font-size: 0.9rem;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}

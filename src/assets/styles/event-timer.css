@@ -1,0 +1,101 @@
+.event-timer {
+  width: 100%;
+  /* background: red; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  color: white;
+
+  font-size: 1.5rem;
+}
+
+.event-timer-container:after {
+  content: "";
+  background: url("../../mmc.png");
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  filter: brightness(15%);
+  z-index: -100;
+}
+.event-timer-container:before {
+  content: "";
+  background: var(--primary-red);
+  opacity: 0.05;
+  position: absolute;
+  inset: 0;
+  z-index: -10;
+}
+.event-timer-container {
+  position: relative;
+  backdrop-filter: blur(10px);
+
+  height: 100%;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3.75rem;
+  padding-top: 1.5rem;
+}
+
+.info-part {
+  font-size: 3em;
+  color: white;
+}
+
+.info-part .subtitle {
+  font-family: "Cedarville Cursive", cursive;
+  text-align: center;
+  font-weight: bold;
+  color: var(--primary-yellow);
+}
+
+.event-timer-container .location-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  gap: 2rem;
+  font-size: 1rem;
+}
+
+.event-timer-container .location-button .btn {
+  padding: 1em 1.25em;
+  /* background: #6167f0; */
+  border-radius: 50px;
+  z-index: 10000;
+  background: var(--primary-red);
+  transition: filter 300ms ease-in-out;
+  white-space: nowrap;
+  width: max-content !important;
+}
+
+.event-timer-container .location-button .btn:hover {
+  filter: brightness(80%);
+
+  cursor: pointer;
+}
+.event-timer-container .location-button .location {
+  display: grid;
+}
+.date {
+  background: var(--primary-red);
+  background-clip: text;
+}
+
+@media screen and (width < 700px) {
+  .event-timer {
+    gap: 1rem;
+  }
+  .event-timer-container .location-button {
+    flex-direction: column-reverse;
+  }
+  .event-timer-container {
+    text-align: center;
+  }
+}

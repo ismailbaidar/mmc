@@ -1,0 +1,132 @@
+nav .nav-links {
+  position: relative;
+}
+
+nav .nav-links::before {
+  position: absolute;
+  inset: 0;
+
+  scale: 2.5;
+  transform: skew(45deg);
+  content: "";
+}
+
+nav li {
+  z-index: 10;
+  display: grid;
+  place-content: center;
+  border: 3px solid transparent;
+  font-weight: 600;
+  color: white;
+}
+
+nav li[data-current="true"] {
+  border-block-end-color: white;
+}
+
+nav .profile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav .profile ul {
+  min-width: 100px;
+  position: absolute;
+  z-index: 10000000;
+  width: 100%;
+  display: none;
+  background-color: white;
+  color: black;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-content: center;
+  transform: translate(0%, 70%);
+}
+.profile ul li {
+  color: inherit !important;
+  padding: 0.5rem;
+
+  font-size: 0.9rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  box-shadow: 1px 1px 3px lightgray;
+  justify-content: center;
+}
+.profile ul li:not(:last-child) {
+  border-bottom: 2px solid var(--primary-red);
+}
+.profile .profile-circle {
+  width: 40px;
+  padding: 0.5rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 2px solid white;
+  background-color: white;
+  color: var(--primary-red);
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.profile .profile-circle .profile-letter {
+  font-weight: bold;
+  font-size: 1.2rem;
+  position: absolute;
+}
+.profile ul li:hover {
+  background-color: var(--primary-red);
+  color: white !important;
+}
+nav {
+  /* margin: 1rem auto !important; */
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 1.25rem 2rem;
+  box-shadow: -1px 1px 3px white;
+
+  z-index: 10000000000;
+  background: var(--primary-red);
+  color: white;
+}
+
+nav .authentication-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: black;
+}
+
+nav .authentication-buttons button {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid black;
+  border: 2px solid transparent;
+}
+
+.nav .authentication-buttons button {
+  border: 1px solid transparent;
+  border-radius: 8px;
+}
+nav .authentication-buttons .sign-in {
+  background-color: white;
+
+  color: var(--primary-red);
+}
+nav .authentication-buttons .sign-up {
+  border-color: white;
+  color: white;
+}
+@media screen and (width < 700px) {
+  .nav-links::before {
+    background: transparent;
+  }
+  .nav-links {
+    color: black;
+  }
+}

@@ -1,0 +1,94 @@
+:root {
+  --main: #fff;
+  --secondary: #fbfaf8;
+  --red: #d33;
+  --gray: #818483;
+  --success: #41d888;
+  --error: #f94416;
+  --info: #0087d7;
+  --warning: #ffbc00;
+  --lightgreen: #f3fef8;
+  --lightblue: #f7f7fe;
+  --lightpurple: #f9f6fe;
+  --lightred: #fff6f7;
+  --font-blue: #8a87ed;
+  --font-red: #f4b1aa;
+  --font-green: #68eda1;
+  --font-purple: #c6aaf2;
+  --light-main: #fed4d5;
+}
+.flash-cards-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0.5rem;
+  position: sticky;
+  top: 80vh;
+  right: 0;
+}
+.flash-card-wrapper {
+  scale: 0.7;
+  width: 340px;
+  height: 150px;
+  overflow: hidden;
+
+  display: grid;
+  grid-template-columns: 0.25fr 0.75fr;
+
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+
+  padding: 0.5rem;
+}
+.flash-card-wrapper[data-type="success"] {
+  background: var(--success);
+}
+.flash-card-wrapper[data-type="error"] {
+  background: var(--error);
+}
+.flash-card-wrapper[data-type="warning"] {
+  background: var(--warning);
+}
+.flash-card-wrapper[data-type="info"] {
+  background: var(--info);
+}
+.flash-card-wrapper svg {
+  font-size: 3rem;
+  color: white;
+  padding-bottom: 2rem;
+  padding-inline: 0.5rem;
+}
+.flash-card-wrapper::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  background: white;
+  bottom: 0;
+  opacity: 0.5;
+  animation: something linear 5000ms alternate;
+
+  transform-origin: right;
+}
+.flash-card-wrapper .content .description {
+  text-align: start;
+  font-size: 0.9rem;
+}
+.flash-card-wrapper .content h3 {
+  color: white;
+}
+.flash-card-wrapper .content {
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes something {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

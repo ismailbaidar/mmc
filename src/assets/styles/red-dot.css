@@ -1,0 +1,14 @@
+.calendar {
+  width: max-content;
+  margin: none !important;
+  background-color: white !important;
+  margin-block: 1rem;
+  box-shadow: 1px 1px 1px lightgray;
+  margin-left: auto;
+}
+.red-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--primary-red);
+}

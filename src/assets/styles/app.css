@@ -1,0 +1,55 @@
+:root {
+  /* --primary: #4a77ee; */
+  --primary-blue: #74b2da;
+  --primary-yellow: #eebc54;
+  --primary-red: #c83a31;
+  --primary-green: #a5ca6d;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+}
+
+.app {
+  height: 100vh;
+  overflow-y: auto;
+  perspective: 10px;
+}
+@keyframes reveal {
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes reveal-left {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes reveal-right {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes reveal-top {
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+@keyframes reveal-bottom {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.position-relaitive {
+  position: relative;
+}

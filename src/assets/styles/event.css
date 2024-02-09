@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+.event-container:after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background-size: cover;
+  filter: brightness(50%);
+  z-index: -100;
+  height: 100vh;
+  background-image: url("../mmc.png");
+}
+
+.event-container {
+  position: relative;
+
+  /* height: 100%;
+  min-height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.75rem;
+  /* padding: 1.5rem; */
+  font-size: 3em;
+  color: white;
+  /* background-color: red; */
+  width: 100%;
+}
+
+.event-container:before {
+  content: "";
+  background: var(--primary-red);
+  opacity: 0.05;
+  position: absolute;
+  inset: 0;
+  z-index: -10;
+}
+
+.event-container .subtitle {
+  font-family: "Cedarville Cursive", cursive;
+  text-align: center;
+  font-weight: bold;
+  color: var(--primary-yellow);
+}
+
+.event-container .titel {
+  font-family: "Cursive", cursive;
+  text-align: center;
+  font-weight: bold;
+  font-size: 3em;
+  color: white;
+}
+
+.event-container .btn {
+  background-color: var(--primary-red);
+  border: 0;
+  border-radius: 40px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-size: 16px;
+  padding: 7px;
+  max-width: 150px;
+  align-self: flex-end;
+
+  letter-spacing: 1px;
+}
+
+.btn:hover {
+  background-color: #ac2c22;
+}
+
+/* event card css */
+
+.cardO-container {
+  background: white;
+  /* position: relative; */
+  inset: 0;
+  width: 100%;
+  left: 0;
+  top: 25%;
+  padding: 1rem;
+  font-size: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 2rem;
+  gap: 2rem;
+  /* height: 100%; */
+  overflow-y: auto;
+
+  /* height: max-content; */
+}
+.event-card {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+
+  width: 100%;
+  padding: 0.5rem 1.5rem;
+
+  position: relative;
+}
+
+.event-card .background-side {
+  background-color: var(--primary-red);
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  /* width: 30%; */
+}
+.event-card .background-side .image {
+  aspect-ratio: 1;
+  height: 150px;
+  /* background-color: white; */
+  box-sizing: border-box;
+  border: 10px solid var(--primary-red);
+  transform: translateX(20%);
+}
+.event-card .background-side .image img {
+  object-fit: cover;
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+.event-card .content-side {
+  background-color: white;
+  color: black;
+  box-shadow: 1px 1px 3px lightgray;
+  padding: 1.5rem;
+  display: grid;
+  gap: 0.5rem;
+  padding-inline-start: 3rem;
+}
+
+.event-card .event-title {
+  font-size: 1.2rem;
+}
+
+.event-card .content-side .event-description {
+  color: darkgray;
+}
+
+.event-card .location-date {
+  /* background-color: red; */
+  font-family: "Oswald", sans-serif;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  color: var(--primary-red);
+  font-weight: bold;
+  justify-content: space-between;
+}
+
+.action-cell {
+  display: flex !important;
+}
+.event-card a {
+  padding: 1rem 1rem;
+  /* position: absolute; */
+  bottom: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: var(--primary-red);
+  border: 2px solid var(--primary-red);
+  position: relative;
+}
+
+.event-card a:hover {
+  background-color: var(--primary-red);
+  color: white;
+}
